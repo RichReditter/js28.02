@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table{
+            text-align : center;
+        }
+    </style>
+
+
+
+    <script> 
+        const header = document.createElement('header');
+        document.body.appendChild(header);
+        const nav = document.createElement('nav');
+        header.append(nav);
+        const ul = document.createElement('ul');
+        nav.appendChild(ul);
+        const li = document.createElement('li');
+        const li1 = document.createElement('li');
+        const li2 = document.createElement('li');
+        ul.appendChild(li);
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        li.textContent = 'page1';
+        li1.textContent = 'page2';
+        li2.textContent = 'page3';
+        const main = document.createElement('main');
+        main.className = 'container';
+        document.body.appendChild(main);;
+        const article = document.createElement('article');
+        main.appendChild(article);
+        h1 = document.createElement('h1');
+        p = document.createElement('p');
+        article.appendChild(h1);
+        article.appendChild(p);
+        aside = document.createElement('aside');
+        aside.className = 'sidebar';
+        main.appendChild(aside);
+        aside.appendChild(ul);
+        const footer = document.createElement('footer');
+        document.body.appendChild(footer);
+        const pcopyright = document.createElement('p');
+        footer.appendChild(pcopyright);
+        pcopyright.textContent = 'copyright';
+        const b = document.createElement('b');
+        b.textContent = 'text';
+        pcopyright.appendChild(b);
+        
+
+        const table = document.createElement('table');
+        document.body.appendChild(table)
+        table.setAttribute('border', '2px solid black');
+        table.setAttribute('width','50%')
+        table.setAttribute('cellspacing','0')
+        table.setAttribute('cellpadding','6')
+        let i = 1;
+        let timerId = setInterval( () => {
+            
+            
+            
+            const tr = document.createElement('tr');
+            
+            
+            let column = 2;
+            let string = 7;
+            table.appendChild(tr);
+            
+            for( let i = 1; i <= column; i++ ) {
+                let td = document.createElement('td');
+                tr.append(td);
+                td.textContent = i;
+            }
+            
+            
+            
+            
+            i++;
+            
+            if( string < i ){
+                clearInterval(timerId)
+            }
+        },500)
+
+        
+        
+
+    </script>
+</body>
+</html>
