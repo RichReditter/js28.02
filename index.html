@@ -62,12 +62,7 @@
         table.setAttribute('cellpadding','6')
         let i = 1;
         let timerId = setInterval( () => {
-            
-            
-            
             const tr = document.createElement('tr');
-            
-            
             let column = 2;
             let string = 7;
             table.appendChild(tr);
@@ -77,12 +72,7 @@
                 tr.append(td);
                 td.textContent = i;
             }
-            
-            
-            
-            
             i++;
-            
             if( string < i ){
                 clearInterval(timerId)
             }
